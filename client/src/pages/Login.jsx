@@ -10,8 +10,8 @@ export default function Login() {
   });
 
   const navigate = useNavigate();
-  const URL = "http://localhost:5000/api/auth/login";
-  const { storeTokenInLS } = useAuth();
+  const { storeTokenInLS, API } = useAuth();
+  const URL = `${API}/api/auth/login`;
 
   //handling the input values
   const handleInput = (event) => {

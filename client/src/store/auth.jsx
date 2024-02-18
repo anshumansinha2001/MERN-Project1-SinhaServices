@@ -13,7 +13,8 @@ export const AuthProvider = ({ children }) => {
 
   const authorizationToken = `Bearer ${token}`;
 
-  const API = "http://localhost:5000";
+  // const API = "http://localhost:5000";
+  const API = import.meta.env.VITE_APP_URI_API;
 
   //Tackling token storage functionality
   const storeTokenInLS = (serverToken) => {

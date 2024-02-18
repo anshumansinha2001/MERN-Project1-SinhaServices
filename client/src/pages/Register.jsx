@@ -12,8 +12,8 @@ export default function Regsiter() {
   });
 
   const navigate = useNavigate();
-  const URL = "http://localhost:5000/api/auth/register";
-  const { storeTokenInLS } = useAuth();
+  const { storeTokenInLS, API } = useAuth();
+  const URL = `${API}/api/auth/register`;
 
   // handling the input value
   const handleInput = (event) => {

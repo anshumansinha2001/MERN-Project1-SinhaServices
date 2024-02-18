@@ -3,12 +3,12 @@ import { useAuth } from "../store/auth";
 
 export default function AdminContacts() {
   const [contactData, setContactData] = useState([]);
-  const { authorizationToken } = useAuth();
+  const { authorizationToken, API } = useAuth();
 
   //Responsible for get All contacts
   const getContactsData = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/contacts`, {
+      const response = await fetch(`${API}/api/admin/contacts`, {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -27,15 +27,12 @@ export default function AdminContacts() {
   // Handling onClick deleteContactById
   const deleteContactById = async (id) => {
     try {
-      const response = await fetch(
-        `http://localhost:5000/api/admin/contacts/delete/${id}`,
-        {
-          method: "DELETE",
-          headers: {
-            Authorization: authorizationToken,
-          },
-        }
-      );
+      const response = await fetch(`${API}/api/admin/contacts/delete/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: authorizationToken,
+        },
+      });
       if (response.ok) {
         getContactsData();
         toast.success("deleted successfully");
