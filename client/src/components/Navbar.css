@@ -1,0 +1,64 @@
+header {
+    /* background-color: rgba(18, 18, 18, 0.8); */
+    max-width: 140rem;
+    padding: 4.2rem 2.4rem;
+    margin: auto 14rem;
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+
+    & .logo-brand a {
+        font-size: 2.4rem !important;
+    }
+}
+
+ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+
+/** -----------------------
+  ** media query section css
+  ** -------------------------  */
+
+@media (width <=998px) {
+    header {
+        margin: auto;
+        padding: 2.2rem 1.4rem;
+
+        & .logo-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        & .logo-brand a {
+            font-size: 4rem !important;
+        }
+
+        & .logo-brand a:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 1rem;
+            text-decoration-color: rgb(181, 181, 181);
+        }
+    }
+
+    ul {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+}
+
+/* For mobile  */
+@media (width <=798px) {
+    header {
+        margin: auto;
+
+        & .logo-brand a {
+            font-size: 3rem !important;
+        }
+    }
+}

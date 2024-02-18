@@ -1,0 +1,35 @@
+// router.get("/", (req, res) => {
+//   res.status(200).send("Welcome to wold best mern series by AnshumanSinha by using router!");
+// });
+
+//<--- This is the Alternative way or recommended to create route --->
+router.route("/").get(authcontrollers.home);
+
+
+// _------------------
+// Regestration Logic
+// _------------------
+// 1. Get Registration Data: 📤 Retrieve user data (username, email, password).
+// 2. Check Email Existence: 📋 Check if the email is already registered.
+// 3. Hash Password: 🔒 Securely hash the password.
+// 4. Create User: 📝 Create a new user with hashed password.
+// 5. Save to DB: 💾 Save user data to the database.
+// 6. Respond: ✅ Respond with "Registration Successful" or handle errors.
+
+What is JWT?(Web Tokens)
+
+JSON Web Tokens (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
+
+JWTs are often used for authentication and authorization in web applications.
+
+Authentication: Verifying the identity of a user or client.
+
+Authorization: Determining what actions a user or client is allowed to perform.
+
+Components of a JWT:
+
+Header: Contains metadata about the token, such as the type of token and the signing algorithm being used.
+
+Payload: Contains claims or statements about an entity (typically, the user) and additional data. Common claims include user ID, username, and expiration time.
+
+Signature: To verify that the sender of the JWT is who it says it is and to ensure that the message wasn't changed along the way, a signature is included.
