@@ -25,20 +25,25 @@ export default function AdminUsers() {
   };
 
   // Delete the user onClick Delete button
-  const deleteUser = async (id) => {
+  const deleteUser = async (id, isAdmin) => {
     try {
-      const response = await fetch(`${API}/api/admin/users/delete/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: authorizationToken,
-        },
-      });
+      if (isAdmin) {
+        alert("Admin can't be Deleted");
+        return;
+      } else {
+        const response = await fetch(`${API}/api/admin/users/delete/${id}`, {
+          method: "DELETE",
+          headers: {
+            Authorization: authorizationToken,
+          },
+        });
 
-      const data = await response.json();
-      console.log(`users after delete: ${data}`);
+        const data = await response.json();
+        console.log(`users after delete: ${data}`);
 
-      if (response.ok) {
-        getAllUserData();
+        if (response.ok) {
+          getAllUserData();
+        }
       }
     } catch (error) {
       console.log(error);
@@ -69,7 +74,7 @@ export default function AdminUsers() {
             <tbody>
               {users &&
                 users.map((currentUser, index) => {
-                  const { username, email, phone, _id } = currentUser;
+                  const { username, email, phone, _id, isAdmin } = currentUser;
                   return (
                     <tr key={index}>
                       <td>{username}</td>
@@ -84,7 +89,9 @@ export default function AdminUsers() {
                         </Link>
                       </td>
                       <td>
-                        <button onClick={() => deleteUser(_id)}>delete</button>
+                        <button onClick={() => deleteUser(_id, isAdmin)}>
+                          delete
+                        </button>
                       </td>
                     </tr>
                   );

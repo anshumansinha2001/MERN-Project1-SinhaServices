@@ -35,7 +35,6 @@ export const AuthProvider = ({ children }) => {
   // JWT AUTHENTICATION - to get the currently loggedIn user data
   const userAuthentication = async () => {
     try {
-      setIsLoading(true);
       const response = await fetch(`${API}/api/auth/user`, {
         method: "GET",
         headers: {
@@ -76,7 +75,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     getServices();
     userAuthentication();
-  }, []);
+  }, [token]);
 
   //Consumer
   return (

@@ -25,6 +25,11 @@ export default function AdminLayout() {
           <nav>
             <ul>
               <li>
+                <NavLink to="/admin">
+                  <FaHome /> Home
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to="/admin/users">
                   <FaUser /> users
                 </NavLink>
@@ -35,14 +40,8 @@ export default function AdminLayout() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/services">
+                <NavLink to="admin/services">
                   <FaRegListAlt /> Services
-                </NavLink>
-              </li>
-
-              <li>
-                <NavLink to="/admin">
-                  <FaHome /> Home
                 </NavLink>
               </li>
             </ul>

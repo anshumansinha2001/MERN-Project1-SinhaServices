@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { useAuth } from "../store/auth";
 
 export default function Navbar() {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, user } = useAuth();
 
   return (
     <>
@@ -40,6 +40,11 @@ export default function Navbar() {
                 </li>
               </>
             )}
+            {user.isAdmin ? (
+              <li>
+                <NavLink to="/admin">Admin</NavLink>
+              </li>
+            ) : null}
           </ul>
         </nav>
       </header>
