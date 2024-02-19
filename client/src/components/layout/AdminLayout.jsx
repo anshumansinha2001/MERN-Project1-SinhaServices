@@ -17,7 +17,7 @@ export default function AdminLayout() {
   return (
     <>
       <center>
-        <h1>Admin Pannel</h1>
+        <p>Admin Pannel</p>
       </center>
 
       <header>
