@@ -12,7 +12,7 @@ const errorMiddleware = require("./middlewares/error-middleware");
 
 // Handling CORS policy issue which occurs due to run two diffrent servers for frontend or backend
 const corsOption = {
-  origin: "https://sinhaservices.vercel.app",
+  origin: process.env.BASE_URL,
   method: "GET, POST, PUT, DELETE, PATCH, HEAD",
   credentials: true,
 };
