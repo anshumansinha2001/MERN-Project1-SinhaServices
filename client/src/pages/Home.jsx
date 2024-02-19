@@ -71,12 +71,12 @@ export default function Home() {
                 the digital age.
               </p>
               <div className="btn btn-group">
-                <a href="/contact">
+                <NavLink to="/contact">
                   <button className="btn">connect now</button>
-                </a>
-                <a href="/services">
+                </NavLink>
+                <NavLink to="/service">
                   <button className="btn secondary-btn">learn more</button>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
