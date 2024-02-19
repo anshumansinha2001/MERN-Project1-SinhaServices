@@ -16,6 +16,10 @@ export default function AdminLayout() {
 
   return (
     <>
+      <center>
+        <h1>Admin Pannel</h1>
+      </center>
+
       <header>
         <div className="container-admin">
           <nav>
@@ -37,7 +41,7 @@ export default function AdminLayout() {
               </li>
 
               <li>
-                <NavLink to="/">
+                <NavLink to="/admin">
                   <FaHome /> Home
                 </NavLink>
               </li>
