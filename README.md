@@ -1,6 +1,6 @@
 # SinhaServices - MERN Project
 
-![SinhaServices Cover](Screenshots/ms1.jpg)
+![SinhaServices Cover](Screenshots/ms1.png)
 
 Sinha Services is a robust MERN (MongoDB, Express.js, React, Node.js) application with a focus on advanced authorization features. Users can seamlessly register, log in, and access a provided feedback form through the application. The project includes an exclusive Admin panel, restricted to administrators, allowing efficient user management and editing capabilities. The Admin panel also features an extensive services section, enabling administrators to manage and provide various offerings.
 
